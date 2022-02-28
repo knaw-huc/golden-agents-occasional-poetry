@@ -1,5 +1,15 @@
 # Experiments
 
+## People in events with other people
+
+Persons in the Gelegenheidsgedichten data have been linked to their occurences in records from the Amsterdam City Archives. They can occur in records on Baptism, Notice of Marriage, Prenuptial Agreement, and Burial. Usually, there are other persons mentioned in the same record (e.g. the Witnesses) who have not yet been disambiguated between records. 
+
+By using a construct query to produce a slice of all the data available in the Golden Agents infrastructure, we can distill a subset that is relevant for enriching the social networks around the actors in the Gelegenheidsgedichten data. 
+
+Results: 
+* [ggd_people_events.ttl](ggd_people_events.ttl)
+* [ggd_people_events_without_child.ttl](ggd_people_events_without_child.ttl) (achieved by toggling the FILTER on the Kind role in the query)
+
 ```sparql
 
 PREFIX schema: <http://schema.org/>
@@ -59,6 +69,9 @@ WHERE {
     [] a ?roleType ;
        roar:carriedBy ?otherPerson ;
        roar:carriedIn ?event .
+
+    # Leave out the children (that only have a pnv:GivenName) out for now
+    # FILTER(?roleType != <https://data.goldenagents.org/thesaurus/Kind>)  # <-- toggle!
     
     # And its not the person itself
     FILTER(?otherPerson != ?person)
