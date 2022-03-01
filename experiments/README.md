@@ -29,7 +29,8 @@ CONSTRUCT {
     ?personName a pnv:PersonName ;
                 pnv:givenName ?givenName ;
                 pnv:surnamePrefix ?surnamePrefix ;
-                pnv:baseSurname ?baseSurname .
+                pnv:baseSurname ?baseSurname ;
+                pnv:literalName ?literalName .
     
     ?otherPerson a roar:Person ;
                  rdfs:label ?otherPersonLiteralName  ;
@@ -39,7 +40,8 @@ CONSTRUCT {
     ?otherPersonName a pnv:PersonName ;
                      pnv:givenName ?otherPersonGivenName ;
                      pnv:surnamePrefix ?otherPersonSurnamePrefix ;
-                     pnv:baseSurname ?otherPersonBaseSurname .
+                     pnv:baseSurname ?otherPersonBaseSurname ;
+                     pnv:literalName ?otherPersonLiteralName .
     
     ?event a ?eventType ;
            sem:hasTimeStamp ?date .
