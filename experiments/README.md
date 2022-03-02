@@ -1,8 +1,12 @@
 # Experiments
 
+- [Experiments](#experiments)
+  - [People in events with other people](#people-in-events-with-other-people)
+    - [With roles](#with-roles)
+  - [Subset of Notarial Archives: Probate Inventories](#subset-of-notarial-archives-probate-inventories)
 ## People in events with other people
 
-Persons in the Gelegenheidsgedichten data have been linked to their occurences in records from the Amsterdam City Archives. They can occur in records on Baptism, Notice of Marriage, Prenuptial Agreement, and Burial. Usually, there are other persons mentioned in the same record (e.g. the Witnesses) who have not yet been disambiguated between records. 
+Persons in the Gelegenheidsgedichten (GGD) data have been linked to their occurences in records from the Amsterdam City Archives. They can occur in records on Baptism, Notice of Marriage, Prenuptial Agreement, and Burial. Usually, there are other persons mentioned in the same record (e.g. the Witnesses) who have not yet been disambiguated between records. 
 
 By using a construct query to produce a slice of all the data available in the Golden Agents infrastructure, we can distill a subset that is relevant for enriching the social networks around the actors in the Gelegenheidsgedichten data. 
 
@@ -18,6 +22,7 @@ PREFIX pnv: <https://w3id.org/pnv#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX sem: <http://semanticweb.cs.vu.nl/2009/11/sem/>
+PREFIX thes: <https://data.goldenagents.org/thesaurus/>
 
 CONSTRUCT {
     
@@ -106,6 +111,7 @@ PREFIX pnv: <https://w3id.org/pnv#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX sem: <http://semanticweb.cs.vu.nl/2009/11/sem/>
+PREFIX thes: <https://data.goldenagents.org/thesaurus/>
 
 CONSTRUCT {
     
@@ -189,4 +195,73 @@ WHERE {
    
     
 }
+```
+
+## Subset of Notarial Archives: Probate Inventories
+
+Slice containing probate inventories only (N=10.424). None of the resources in this data have been linked to the GGD.
+
+Result: 
+* [na_inventories.ttl](na_inventories.ttl)
+
+```sparql
+PREFIX schema: <http://schema.org/>
+PREFIX roar: <https://data.goldenagents.org/ontology/roar/>
+PREFIX pnv: <https://w3id.org/pnv#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sem: <http://semanticweb.cs.vu.nl/2009/11/sem/>
+PREFIX thes: <https://data.goldenagents.org/thesaurus/>
+
+CONSTRUCT {
+    
+    ?person a roar:Person ;
+            rdfs:label ?literalName ;
+            pnv:hasName ?personName ;
+            roar:participatesIn ?event .
+    
+    ?personName a pnv:PersonName ;
+                pnv:givenName ?givenName ;
+                pnv:surnamePrefix ?surnamePrefix ;
+                pnv:baseSurname ?baseSurname ;
+                pnv:literalName ?literalName .
+    
+    ?personRole a ?personRoleType ;
+                roar:carriedIn ?event ;
+                roar:carriedBy ?person .
+    
+    ?event a ?eventType ;
+           sem:hasTimeStamp ?date .
+    
+}
+
+WHERE {
+    
+    # A person takes part in an event
+    ?person a roar:Person ; 
+            pnv:hasName ?personName ;
+    	    roar:participatesIn ?event .
+    
+    # Has name information
+    ?personName a pnv:PersonName ;
+                pnv:literalName ?literalName .
+    
+    OPTIONAL { ?personName pnv:givenName ?givenName . }
+    OPTIONAL { ?personName pnv:surnamePrefix ?surnamePrefix . }
+    OPTIONAL { ?personName pnv:baseSurname ?baseSurname . }
+    
+    # That person has a particular role in that event
+    ?personRole a ?personRoleType ;
+       roar:carriedBy ?person ;
+       roar:carriedIn ?event .
+    
+    # That event has a date and is of a particular type
+    ?event a ?eventType ;
+           sem:hasTimeStamp ?date .
+    
+    FILTER(?eventType = <https://data.goldenagents.org/thesaurus/Boedelinventaris> )
+   
+    
+}
+
 ```
