@@ -6,7 +6,7 @@
   - [Subset of Notarial Archives: Probate Inventories](#subset-of-notarial-archives-probate-inventories)
 ## People in events with other people
 
-Persons in the Gelegenheidsgedichten (GGD) data have been linked to their occurences in records from the Amsterdam City Archives. They can occur in records on Baptism, Notice of Marriage, Prenuptial Agreement, and Burial. Usually, there are other persons mentioned in the same record (e.g. the Witnesses) who have not yet been disambiguated between records. 
+Persons in the Gelegenheidsgedichten (GGD) data have been linked to their occurences in records from the Amsterdam City Archives. They can occur in records on Baptism, Notice of Marriage, Prenuptial Agreement, Probate Inventory, and Burial. Usually, there are other persons mentioned in the same record (e.g. the Witnesses) who have not yet been disambiguated between records. 
 
 By using a construct query to produce a slice of all the data available in the Golden Agents infrastructure, we can distill a subset that is relevant for enriching the social networks around the actors in the Gelegenheidsgedichten data. 
 
