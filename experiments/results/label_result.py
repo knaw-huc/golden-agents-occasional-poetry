@@ -70,7 +70,7 @@ def main(infile, outfile):
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
-        print("Usage: python3 enrich_result.py <input_file> <output_file>")
+        print("Usage: python3 label_result.py <input_file> <output_file>")
         exit()
 
     input_file = sys.argv[1]
