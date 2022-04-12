@@ -199,7 +199,7 @@ WHERE {
 
 ## Subset of Notarial Archives: Probate Inventories
 
-Slice containing probate inventories only (N=10.424). None of the resources in this data have been linked to the GGD.
+Slice containing probate inventories only (N=10.424). Some of the resources in this data have been linked to the GGD.
 
 Result: 
 * [na_inventories.ttl](na_inventories.ttl)
