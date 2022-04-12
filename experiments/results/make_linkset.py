@@ -13,6 +13,31 @@ voidPlus = Namespace("https://lenticularlens.org/voidPlus/")
 
 
 def main(infile, outfile):
+    """
+    Create a (reified) linkset from a GraphEmbeddings result.
+
+    This function takes in a GraphEmbeddings result and creates a owl:sameAs
+    linkset from its clusters. Per cluster, it outputs a owl:sameAs triple
+    for all the combinations of the resources in this cluster. Skolemized
+    blank nodes are used as resource identifiers for the rdf:Statement.
+
+    Example:
+        ```ttl
+        <https://archief.amsterdam/indexen/deeds/0cda93b1-ad78-4dc1-a835-42b1249411d0?person=961f6b00-713c-53f7-e053-b784100aa83b> owl:sameAs <https://archief.amsterdam/indexen/deeds/76803bae-cbec-4461-8749-620069ea686f?person=961f6b10-f7fe-53f7-e053-b784100aa83b> .
+
+        <https://data.goldenagents.org/.well-known/genid/Nc5f7e3e4703548608811eb88a231fd4d> a rdf:Statement ;
+            rdf:object <https://archief.amsterdam/indexen/deeds/76803bae-cbec-4461-8749-620069ea686f?person=961f6b10-f7fe-53f7-e053-b784100aa83b> ;
+            rdf:predicate owl:sameAs ;
+            rdf:subject <https://archief.amsterdam/indexen/deeds/0cda93b1-ad78-4dc1-a835-42b1249411d0?person=961f6b00-713c-53f7-e053-b784100aa83b> ;
+            prov:wasDerivedFrom "ggd_otr_doop_clusters_t0.70_k10.tsv" ;
+            voidPlus:hasClusterID 1356 .
+        ```
+
+    Args:
+        infile (str): path to the csv/tsv file
+        outfile (str): path to the output file (.trig)
+
+    """
 
     # filename without extension
     filename = os.path.basename(infile)
