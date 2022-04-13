@@ -6,7 +6,7 @@
   - [Subset of Notarial Archives: Probate Inventories](#subset-of-notarial-archives-probate-inventories)
 ## People in events with other people
 
-Persons in the Gelegenheidsgedichten (GGD) data have been linked to their occurences in records from the Amsterdam City Archives. They can occur in records on Baptism, Notice of Marriage, Prenuptial Agreement, Probate Inventory, and Burial. Usually, there are other persons mentioned in the same record (e.g. the Witnesses) who have not yet been disambiguated between records. 
+Persons in the Gelegenheidsgedichten (GGD) data have been linked to their occurences in records from the Amsterdam City Archives. They can occur in records on Baptism, Notice of Marriage, Prenuptial Agreement, Probate Inventory, Testament, and Burial. Usually, there are other persons mentioned in the same record (e.g. the Witnesses) who have not yet been disambiguated between records. 
 
 By using a construct query to produce a slice of all the data available in the Golden Agents infrastructure, we can distill a subset that is relevant for enriching the social networks around the actors in the Gelegenheidsgedichten data. 
 
@@ -58,7 +58,7 @@ WHERE {
     # A person takes part in an event
     ?person a schema:Person ; # only in GGD
             pnv:hasName ?personName ;
-    	    roar:participatesIn ?event .
+            roar:participatesIn ?event .
     
     # Has name information
     ?personName a pnv:PersonName ;
@@ -72,28 +72,29 @@ WHERE {
     ?event a ?eventType ;
            sem:hasTimeStamp ?date .
  
-    # There is another person in a particular role in that event
-    [] a ?roleType ;
-       roar:carriedBy ?otherPerson ;
-       roar:carriedIn ?event .
+    # There is an optional other person in a particular role in that event
+    OPTIONAL {
+        [] a ?roleType ;
+           roar:carriedBy ?otherPerson ;
+           roar:carriedIn ?event .
 
-    # Leave out the children (that only have a pnv:GivenName) out for now
-    # FILTER(?roleType != <https://data.goldenagents.org/thesaurus/Kind>)  # <-- toggle!
-    
-    # And its not the person itself
-    FILTER(?otherPerson != ?person)
-    
-    # This person also has a name
-    ?otherPerson pnv:hasName ?otherPersonName .
-    
-    # Has name information
-    ?otherPersonName a pnv:PersonName ;
-                     pnv:literalName ?otherPersonLiteralName .
-    
-    OPTIONAL { ?otherPersonName pnv:givenName ?otherPersonGivenName . }
-    OPTIONAL { ?otherPersonName pnv:surnamePrefix ?otherPersonSurnamePrefix . }
-    OPTIONAL { ?otherPersonName pnv:baseSurname ?otherPersonBaseSurname . }
-   
+        # Leave out the children (that only have a pnv:GivenName) out for now
+        # FILTER(?roleType != <https://data.goldenagents.org/thesaurus/Kind>)  # <-- toggle!
+
+        # And its not the person itself
+        FILTER(?otherPerson != ?person)
+
+        # This person also has a name
+        ?otherPerson pnv:hasName ?otherPersonName .
+
+        # Has name information
+        ?otherPersonName a pnv:PersonName ;
+                         pnv:literalName ?otherPersonLiteralName .
+
+        OPTIONAL { ?otherPersonName pnv:givenName ?otherPersonGivenName . }
+        OPTIONAL { ?otherPersonName pnv:surnamePrefix ?otherPersonSurnamePrefix . }
+        OPTIONAL { ?otherPersonName pnv:baseSurname ?otherPersonBaseSurname . }
+    }   
     
 }
 
@@ -155,7 +156,7 @@ WHERE {
     # A person takes part in an event
     ?person a schema:Person ; # only in GGD
             pnv:hasName ?personName ;
-    	    roar:participatesIn ?event .
+            roar:participatesIn ?event .
     
     # Has name information
     ?personName a pnv:PersonName ;
@@ -174,25 +175,26 @@ WHERE {
     ?event a ?eventType ;
            sem:hasTimeStamp ?date .
  
-    # There is another person in a particular role in that event
-    ?otherPersonRole a ?otherPersonRoleType ;
-       roar:carriedBy ?otherPerson ;
-       roar:carriedIn ?event .
-    
-    # And its not the person itself
-    FILTER(?otherPerson != ?person)
-    
-    # This person also has a name
-    ?otherPerson pnv:hasName ?otherPersonName .
-    
-    # Has name information
-    ?otherPersonName a pnv:PersonName ;
-                     pnv:literalName ?otherPersonLiteralName .
-    
-    OPTIONAL { ?otherPersonName pnv:givenName ?otherPersonGivenName . }
-    OPTIONAL { ?otherPersonName pnv:surnamePrefix ?otherPersonSurnamePrefix . }
-    OPTIONAL { ?otherPersonName pnv:baseSurname ?otherPersonBaseSurname . }
-   
+    # There is an optional other person in a particular role in that event
+    OPTIONAL {
+        ?otherPersonRole a ?otherPersonRoleType ;
+           roar:carriedBy ?otherPerson ;
+           roar:carriedIn ?event .
+
+        # And its not the person itself
+        FILTER(?otherPerson != ?person)
+
+        # This person also has a name
+        ?otherPerson pnv:hasName ?otherPersonName .
+
+        # Has name information
+        ?otherPersonName a pnv:PersonName ;
+                         pnv:literalName ?otherPersonLiteralName .
+
+        OPTIONAL { ?otherPersonName pnv:givenName ?otherPersonGivenName . }
+        OPTIONAL { ?otherPersonName pnv:surnamePrefix ?otherPersonSurnamePrefix . }
+        OPTIONAL { ?otherPersonName pnv:baseSurname ?otherPersonBaseSurname . }
+    }
     
 }
 ```
@@ -240,7 +242,7 @@ WHERE {
     # A person takes part in an event
     ?person a roar:Person ; 
             pnv:hasName ?personName ;
-    	    roar:participatesIn ?event .
+            roar:participatesIn ?event .
     
     # Has name information
     ?personName a pnv:PersonName ;
