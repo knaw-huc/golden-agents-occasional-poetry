@@ -3,7 +3,7 @@ import pandas as pd
 
 from SPARQLWrapper import SPARQLWrapper, JSON
 
-ENDPOINT = "http://graphdb.localhost/repositories/GA"
+ENDPOINT = "http://graphdb.localhost/repositories/GA?infer=false"
 
 QUERY = """
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -14,8 +14,9 @@ SELECT
 
     ?uri
     (GROUP_CONCAT(DISTINCT ?label; separator='; ') AS ?labels)
-    (GROUP_CONCAT(DISTINCT ?roleType; separator=', ') AS ?roleTypes)
-    (GROUP_CONCAT(DISTINCT ?eventType; separator=', ') AS ?eventTypes)
+    (GROUP_CONCAT(DISTINCT ?roleType; separator='; ') AS ?roleTypes)
+    (GROUP_CONCAT(DISTINCT ?eventType; separator='; ') AS ?eventTypes)
+    (GROUP_CONCAT(DISTINCT ?eventDate; separator='; ') AS ?eventDates)
 
 WHERE {
     ?uri roar:participatesIn ?event .
@@ -28,7 +29,8 @@ WHERE {
           roar:carriedBy ?uri ;
           roar:carriedIn ?event .
 
-    ?event a ?eventType .
+    ?event a ?eventType ;
+        sem:hasTimeStamp ?eventDate .
 
     VALUES ?uri {   VALUESHERE   }
 } GROUP BY ?uri
@@ -60,6 +62,12 @@ def main(infile, outfile):
 
     # Merge with original dataframe
     df = df.merge(df_results, on="uri")
+
+    # Order by cluster id and date
+    df = df.sort_values(["cluster_id", "eventDates"])
+
+    # Filter out URIs in thesauri entries
+    df = df.replace("https://data.goldenagents.org/thesaurus/", "", regex=True)
 
     # Write to file
     if outfile.endswith(".csv"):
