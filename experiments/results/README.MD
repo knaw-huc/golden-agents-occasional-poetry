@@ -16,7 +16,7 @@ Again, smaller thresholds will generally yield larger clusters, and visa versa. 
 ## Results
 
 Files:
-* `ggd_clusters_t0.70_k10.tsv`: 9151 resources in 771 clusters
-* `ggd_clusters_t0.80_k10.tsv`: 6788 resources in 2078 clusters
-* `ggd_clusters_t0.85_k10.tsv`: 4586 resources in 2816 clusters
-* `ggd_clusters_t0.90_k10.tsv`: 1599 resources in 3399 clusters
+* `ggd_clusters_t0.70_k10.tsv`: 9151 resources in 3399 clusters
+* `ggd_clusters_t0.80_k10.tsv`: 6788 resources in 2816 clusters
+* `ggd_clusters_t0.85_k10.tsv`: 4586 resources in 2078 clusters
+* `ggd_clusters_t0.90_k10.tsv`: 1599 resources in 771 clusters
