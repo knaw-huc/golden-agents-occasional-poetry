@@ -12,3 +12,11 @@ We can then construct a graph from these candidate pairs, where each node in the
 
 The threshold parameter is also used in the process of splitting up the components into smaller clusters. During clustering, we subtract the threshold from all computed similarities inside a connected component. We also check for rule violations inside each component. 
 Again, smaller thresholds will generally yield larger clusters, and visa versa. Afterwards each cluster is considered to represent a single real life entity.
+
+## Results
+
+Files:
+* `ggd_clusters_t0.70_k10.tsv`: 9151 resources in 771 clusters
+* `ggd_clusters_t0.80_k10.tsv`: 6788 resources in 2078 clusters
+* `ggd_clusters_t0.85_k10.tsv`: 4586 resources in 2816 clusters
+* `ggd_clusters_t0.90_k10.tsv`: 1599 resources in 3399 clusters
