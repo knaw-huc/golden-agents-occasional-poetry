@@ -1,0 +1,49 @@
+graph: data/ggd/ggd_people_events_roles.ttl
+method: glove
+dim: 100
+predicates:
+  type: MANUAL
+  filter: [
+      roar:participatesIn,
+      pnv:hasName,
+      pnv:literalName,
+      pnv:givenName,
+      pnv:baseSurname
+  ]
+  weights:
+    roar:participatesIn: 1
+    pnv:hasName: 2
+    pnv:literalName: 2
+    pnv:givenName: 1
+    pnv:baseSurname: 1
+similarity:
+  - sourceType: pnv:PersonName
+    targetType: pnv:PersonName
+    sourcePredicate: pnv:givenName
+    targetPredicate: pnv:givenName
+    method: LEVENSHTEIN
+    threshold: 0.9
+  - sourceType: pnv:PersonName
+    targetType: pnv:PersonName
+    sourcePredicate: pnv:literalName
+    targetPredicate: pnv:literalName
+    method: LEVENSHTEIN
+    threshold: 0.9
+  - sourceType: pnv:PersonName
+    targetType: pnv:PersonName
+    sourcePredicate: pnv:baseSurname
+    targetPredicate: pnv:baseSurname
+    method: LEVENSHTEIN
+    threshold: 0.9
+bca:
+  alpha: 1e-3
+  epsilon: 1e-4
+opt:
+  method: amsgrad
+  tolerance: 1e-6
+  maxiter: 1000
+output:
+  name: ggd_embedding
+  writer: glove
+  type: [roar:Person]
+
