@@ -1,4 +1,5 @@
 source('src/create-linkset.R')
+library(data.table)
 
 query.violation.data <- list(
   endpoint = 'http://localhost:5820/ggd/query',
@@ -84,49 +85,6 @@ ggd.results <- perform.tests( dataset = 'ggd_embedding', cluster.options, query.
 
 fwrite(ggd.results, file = paste0('ggd_otr_doop_clusters_t', cluster.options$theta, '_k', cluster.options$k ,'.tsv'), sep = '\t')
 
-
-
-
-
-
-
-# name.query <- paste0('
-# PREFIX roar: <https://data.goldenagents.org/ontology/roar/>
-# PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-# PREFIX sem: <http://semanticweb.cs.vu.nl/2009/11/sem/>
-# SELECT (GROUP_CONCAT(?names; separator=", ") AS ?name) (MIN(?dates) AS ?date) WHERE {
-# 	?p a roar:Person ;
-# 	rdfs:label ?names ;
-#   roar:participatesIn ?events .
-#   ?events sem:hasTimeStamp ?dates.
-# 	VALUES (?i ?p) {',
-#   paste(paste0('(', 1:length(ggd.results$uri) ,'<', ggd.results$uri, '>)'), collapse = '\n'),
-#   '}} GROUP BY ?p ?i ORDER BY ASC(?i)')
-# 
-# 
-# if(query.options$post) {
-#   test <- httr::POST(
-#     url = query.violation.data$endpoint,
-#     httr::add_headers(Accept = 'text/csv', Authorization = 'Basic YWRtaW46YWRtaW4='),
-#     body = list(query = name.query, infer = 'false'),
-#     encode = 'form'
-#   )
-#   results <- fread(
-#     text = rawToChar(test$content),
-#     header = T,
-#     fill = T
-#   )
-#   rm(test)
-#   
-# } else {
-#   
-#   results <- fread(RCurl::getURL(paste0(query.violation.data$endpoint,'?query=',utils::URLencode(name.query, reserved = T)), httpheader=c(Accept="text/csv"), userpwd = "admin:admin"))
-# }
-# 
-# 
-# ggd.results$name <- results$name
-# ggd.results$date <- results$date
-# rm(results)
 
 
 
