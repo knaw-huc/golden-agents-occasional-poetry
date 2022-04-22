@@ -1,4 +1,5 @@
 source('src/create-linkset.R')
+library(data.table)
 
 load.saa.ground.truth <- function() {
   truth <- fread('data/saa-truth.tsv',  header = T, sep = '\t', blank.lines.skip = T, quote = '#')
