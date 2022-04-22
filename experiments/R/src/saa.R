@@ -250,7 +250,7 @@ query.options <- list(
 
 
 ground.truth <- load.saa.ground.truth()
-thetas2 <- c(0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95)
+thetas <- c(0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95)
 
 performances.no.rules <- t(sapply(thetas, function(theta) {
   
