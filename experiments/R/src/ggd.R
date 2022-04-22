@@ -80,7 +80,7 @@ query.options <- list(
 )
 
 
-ggd.results <- perform.tests( dataset = 'ggd_embedding2', cluster.options, query.options, query.violation.data)
+ggd.results <- perform.tests( dataset = 'ggd_embedding', cluster.options, query.options, query.violation.data)
 
 fwrite(ggd.results, file = paste0('ggd_otr_doop_clusters_t', cluster.options$theta, '_k', cluster.options$k ,'.tsv'), sep = '\t')
 
