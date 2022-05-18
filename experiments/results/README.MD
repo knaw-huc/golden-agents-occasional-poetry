@@ -33,3 +33,5 @@ Files:
 The `ggd_clusters_t0.70_k10.tsv` file was manually validated and the result is given in `ggd_clusters_t0.70_k10_validation.tsv`. It includes two extra columns:
 * `valid`: TRUE or FALSE depending on whether the resource is rightfully in this cluster
 * `comments`: for additional information on a record or entity
+
+From this file a RDF-linkset was generated using the `make_linkset.py` script: `ggd_clusters_t0.70_k10_validation.trig`. Only the resources that have `valid = TRUE` are included in the linkset. The `owl:sameAs` predicate is used to link the resources together and an extra `rdf:Statement` resource is added for each link to indicate the clusterId (cf. the [VoiD+ vocabulary](https://lenticularlens.org/docs/03.Ontology/#4-void-documentation). )
