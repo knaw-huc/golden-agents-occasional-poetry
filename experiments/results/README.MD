@@ -13,6 +13,13 @@ We can then construct a graph from these candidate pairs, where each node in the
 The threshold parameter is also used in the process of splitting up the components into smaller clusters. During clustering, we subtract the threshold from all computed similarities inside a connected component. We also check for rule violations inside each component. 
 Again, smaller thresholds will generally yield larger clusters, and visa versa. Afterwards each cluster is considered to represent a single real life entity.
 
+## Scripts
+
+This folder contains two scripts:
+
+* `label_result.py` that is used to label the results of the experiment with additional meta data, such as the name of the person, the roles in which he/she occurs, the type of event, and the event date. This is run before the validation step and helps the user to understand and validate the result.
+* `make_linkset.py` that transforms a file into an RDF-linkset. We run this script after the validation step on the validated file. It can also be used on the other files, if wanted, then all resources are included. 
+
 ## Results
 
 Files:
@@ -20,3 +27,9 @@ Files:
 * `ggd_clusters_t0.80_k10.tsv`: 6788 resources in 2816 clusters
 * `ggd_clusters_t0.85_k10.tsv`: 4586 resources in 2078 clusters
 * `ggd_clusters_t0.90_k10.tsv`: 1599 resources in 771 clusters
+
+## Validation
+
+The `ggd_clusters_t0.70_k10.tsv` file was manually validated and the result is given in `ggd_clusters_t0.70_k10_validation.tsv`. It includes two extra columns:
+* `valid`: TRUE or FALSE depending on whether the resource is rightfully in this cluster
+* `comments`: for additional information on a record or entity
