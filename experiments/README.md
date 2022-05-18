@@ -1,9 +1,33 @@
+# 
+
 # Experiments
 
-- [Experiments](#experiments)
+- [Creating Embeddings](#creating-embeddings)
+- [Creating Linksets](#creating-linksets)
+- [Amsterdam City Archives with Ecartico](#amsterdam-city-archives-with-ecartico)
+- [Amsterdam City Archives with Occasional Poetry and Probate Inventories](#amsterdam-city-archives-with-occasional-poetry-and-probate-inventories)
   - [People in events with other people](#people-in-events-with-other-people)
     - [With roles](#with-roles)
   - [Subset of Notarial Archives: Probate Inventories](#subset-of-notarial-archives-probate-inventories)
+
+# Creating Embeddings
+
+The embeddings are created with a java program which can be downloaded [here](https://github.com/Jurian/graph-embeddings). Instructions on how to compile the code into a runnable jar file and on how to run the software with a configuration file are included. The configuration files we have used for our experiments are in the [java](java) directory.
+
+# Creating Linksets
+
+The [R](R) directory contains all the code necessary to create a linkset from an embedding. Included in the [data](R/data) directory are the embeddings (as a compressed file). In the [src](R/src) directory all relevant R and c++ code is located. Run the scripts [saa.R](R/src/saa.R) and [ggd.R](R/src/ggd.R) to create the actual linksets, all other files contain code needed to perform this task.
+
+# Amsterdam City Archives with Ecartico 
+
+For our first experiment, we fist created an embedding from the [saa.trig](saa.trig) file. Then we ran the [saa.R](R/src/saa.R) script to create linksets. The ground truth is located in the [saa-truth.tsv](R/data/saa-truth.tsv) file.
+
+# Amsterdam City Archives with Occasional Poetry and Probate Inventories
+
+The second experiment was performed by creating an embedding from the [ggd_people_events_roles.ttl](ggd_people_events_roles.ttl) file. Then we ran the [ggd.R](R/src/ggd.R) script to create linkset. The linkset was then manually checked by a domain expert. 
+
+Below is documented how the dataset from the second experiment was created.
+
 ## People in events with other people
 
 Persons in the Gelegenheidsgedichten (GGD) data have been linked to their occurences in records from the Amsterdam City Archives. They can occur in records on Baptism, Notice of Marriage, Prenuptial Agreement, Probate Inventory, Testament, and Burial. Usually, there are other persons mentioned in the same record (e.g. the Witnesses) who have not yet been disambiguated between records. 
