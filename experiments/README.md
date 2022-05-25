@@ -18,6 +18,8 @@ The embeddings are created with a java program which can be downloaded [here](ht
 
 The [R](R) directory contains all the code necessary to create a linkset from an embedding. Included in the [data](R/data) directory are the embeddings (as a compressed file). In the [src](R/src) directory all relevant R and c++ code is located. Run the scripts [saa.R](R/src/saa.R) and [ggd.R](R/src/ggd.R) to create the actual linksets, all other files contain code needed to perform this task.
 
+An example query that is used to check for contraints following from domain knowledge can be found in [`query_example.rq`](query_example.rq).
+
 # Experiment and case study 
 
 ## 1. Amsterdam City Archives with Ecartico 
