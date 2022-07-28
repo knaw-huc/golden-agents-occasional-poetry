@@ -1,11 +1,6 @@
-Kerknaam,Type,Adress,Time,Link,
-Lutherse Kerk,Church,Singel 411?,1600-1632/1633,https://nl.wikipedia.org/wiki/Oude_Lutherse_Kerk,
-Mozes- en Aäronkerk,Church,Breestraat,1641-1841?,https://nl.wikipedia.org/wiki/Mozes_en_A%C3%A4ronkerk,
-Kerk De Lelie,Church,Boommarkt,1646-1817?,https://nl.wikipedia.org/wiki/Sint-Catharinakerk_(Amsterdam),
-Kerk De Toren,Church,Singel 156,1648-1929,https://reliwiki.nl/index.php/Amsterdam,_Singel_156_-_Thomas_van_Aquino
-Kerk Stadhuis van Hoorn,Church,Nieuwezijds Achterburgwal,1637?-1737,https://archief.amsterdam/inventarissen/details/438,
-Kerk Het Vrededuifje,Church,Kerkstraat,1682?-1797?,https://archief.amsterdam/inventarissen/details/436,
-Kerk De Drie Valken,Church,Voorburgwal 91,1786?-1830?,https://archief.amsterdam/beeldbank/detail/582c757e-e58d-d432-74c7-84848488014b,
-Nieuwe Waalse Kerk,Church,Molenpad,1719-1808,https://archief.amsterdam/beeldbank/detail/b3f08560-5498-c4a6-c8dc-bead4cbf5926,
-Sint Nicolaaskerk,Church,Korte Kolksteeg/Nieuwezijds Voorburgwal 78,1655?-1695,https://archief.amsterdam/inventarissen/details/5001/path/1.2.27.1,
-Sint Nicolaaskerk,Church,Nieuwezijds Achterburgwal,1695-1808,https://archief.amsterdam/inventarissen/details/5001/path/1.2.27.1,
+Kerknaam,Type,Adress,Time,Link
+Lutherse Kerk,Church,Singel 411?,1600-1632/1633,https://nl.wikipedia.org/wiki/Oude_Lutherse_Kerk
+Kerk Het Vrededuifje,Church,Kerkstraat,1682?-1797?,https://archief.amsterdam/inventarissen/details/436
+Nieuwe Waalse Kerk,Church,Molenpad,1719-1808,https://archief.amsterdam/beeldbank/detail/b3f08560-5498-c4a6-c8dc-bead4cbf5926
+Sint Nicolaaskerk,Church,Korte Kolksteeg/Nieuwezijds Voorburgwal 78,1655?-1695,https://archief.amsterdam/inventarissen/details/5001/path/1.2.27.1
+Sint Nicolaaskerk,Church,Nieuwezijds Achterburgwal,1695-1808,https://archief.amsterdam/inventarissen/details/5001/path/1.2.27.1
