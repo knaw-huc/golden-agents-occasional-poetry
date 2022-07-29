@@ -29,7 +29,7 @@ SELECT (COUNT(?registrationEvent) AS ?c) ?location ?religion WHERE {
 
 Results: [`location-religion-count.csv`](location-religion-count.csv)
 
-The results of this query are now curated on a basic level (see: 'Religie_Kerken_DTB.csv') , which means that different locations that occured in one decription (for example 'Noorderkerk en Kerkhof') are seperated into different entities ('Noorderkerk', 'Noorderkerkhof'), all location names are standardized and are categorized with a type. Religions and if possible also locations have URI's to Adamlink and Wikidata, although a lot of clandestine churches aren't findable on Adamlink and could be added to 'buildings' (see: 'Aanvullingen_kerken_Adamlink.csv').
+The results of this query are now curated on a basic level (see: 'Religie_Kerken_DTB.csv') , which means that different locations that occured in one decription (for example 'Noorderkerk en Kerkhof') are seperated into different entities ('Noorderkerk', 'Noorderkerkhof'), all location names are standardized and are categorized with a type. Religions and if possible also locations have URI's to Adamlink and Wikidata. Churches that were not yet in Adamlink have been entered.
 
 Please notify the following issues:
 - Although religion and church coincide most of the time (in a Walloon or a Lutheran church one might expect only Walloon and Lutheran Baptisms for instance) this is not always the case. It is likely to also find Roman Catholic burials in the Dutch Reformed churches such as the Nieuwe Kerk and the Oude Kerk also after the 'Alteratie' of 1578. The same applies for Lutherans and Walloons, who also might be found in the indexes of the large Dutch Reformed churches.
