@@ -331,9 +331,9 @@
         "adamlink": "https://adamlink.nl/geo/building/ignatius/641",
         "wikidata": null
     }, {
-        "@id": "https://data.goldenagents.org/thesaurus/KerkInTMaagdenhuis",
+        "@id": "https://data.goldenagents.org/thesaurus/KerkInHetMaagdenhuis",
         "@type": "Location",
-        "label": "Kerk in 't Maagdenhuis",
+        "label": "Kerk in het Maagdenhuis",
         "religions": ["https://data.goldenagents.org/thesaurus/RoomsKatholiek"],
         "adamlink": "https://adamlink.nl/geo/building/kerk-in-het-maagdenhuis/1447",
         "wikidata": null
