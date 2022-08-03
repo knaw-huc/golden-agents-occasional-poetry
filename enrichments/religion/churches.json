@@ -256,14 +256,14 @@
     }, {
         "@id": "https://data.goldenagents.org/thesaurus/KerkOpDeBrouwersgracht",
         "@type": "Location",
-        "label": "Kerk Op De Brouwersgracht",
+        "label": "Kerk op de Brouwersgracht",
         "religions": ["https://data.goldenagents.org/thesaurus/RoomsKatholiek", "https://data.goldenagents.org/thesaurus/OudKatholiek"],
         "adamlink": "https://adamlink.nl/geo/building/kerk-op-de-brouwersgracht/1449",
         "wikidata": null
     }, {
         "@id": "https://data.goldenagents.org/thesaurus/KerkOpHetKuiperspad",
         "@type": "Location",
-        "label": "Kerk Op Het Kuiperspad",
+        "label": "Kerk op het Kuiperspad",
         "religions": ["https://data.goldenagents.org/thesaurus/RoomsKatholiek"],
         "adamlink": "https://adamlink.nl/geo/building/willibrordus-buiten-de-veste/643",
         "wikidata": null
@@ -354,14 +354,14 @@
     }, {
         "@id": "https://data.goldenagents.org/thesaurus/KerkInDeVinkenstraat",
         "@type": "Location",
-        "label": "Kerk In De Vinkenstraat",
+        "label": "Kerk in de Vinkenstraat",
         "religions": ["https://data.goldenagents.org/thesaurus/RoomsKatholiek", "https://data.goldenagents.org/thesaurus/OudKatholiek"],
         "adamlink": "https://adamlink.nl/geo/building/vinkenstraat-160162/824",
         "wikidata": null
     }, {
         "@id": "https://data.goldenagents.org/thesaurus/KerkOpDeRaamgracht",
         "@type": "Location",
-        "label": "Kerk Op De Raamgracht",
+        "label": "Kerk op de Raamgracht",
         "religions": ["https://data.goldenagents.org/thesaurus/RoomsKatholiek"],
         "adamlink": "https://adamlink.nl/geo/building/kerk-op-de-raamgracht/1445",
         "wikidata": null
