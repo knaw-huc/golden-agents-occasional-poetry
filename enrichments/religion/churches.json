@@ -1,0 +1,474 @@
+{
+    "@context": {
+        "Location": "https://data.goldenagents.org/ontology/roar/Location",
+        "label": "http://www.w3.org/2000/01/rdf-schema#label",
+        "adamlink": {
+            "@type": "@id",
+            "@id": "http://www.w3.org/2002/07/owl#sameAs"
+        },
+        "wikidata": {
+            "@type": "@id",
+            "@id": "http://www.w3.org/2002/07/owl#sameAs"
+        },
+        "religions": {
+            "@type": "@id",
+            "@id": "https://data.goldenagents.org/ontology/roar/hasReligion"
+        }
+    },
+    "@graph": [{
+        "@id": "https://data.goldenagents.org/thesaurus/KarthuizerKerkhof",
+        "@type": "Location",
+        "label": "Karthuizer Kerkhof",
+        "religions": [],
+        "adamlink": null,
+        "wikidata": "http://www.wikidata.org/entity/Q112796043"
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/StAnthonisKerkhof",
+        "@type": "Location",
+        "label": "St. Anthonis Kerkhof",
+        "religions": [],
+        "adamlink": null,
+        "wikidata": "http://www.wikidata.org/entity/Q112811561"
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/HeiligewegsEnLeidscheKerkhof",
+        "@type": "Location",
+        "label": "Heiligewegs- en Leidsche Kerkhof",
+        "religions": [],
+        "adamlink": null,
+        "wikidata": "http://www.wikidata.org/entity/Q112811681"
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/NieuweKerk",
+        "@type": "Location",
+        "label": "Nieuwe Kerk",
+        "religions": ["https://data.goldenagents.org/thesaurus/Hervormd", "https://data.goldenagents.org/thesaurus/RoomsKatholiek"],
+        "adamlink": "https://adamlink.nl/geo/building/nieuwe-kerk/1222",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/LutherseKerk",
+        "@type": "Location",
+        "label": "Lutherse Kerk",
+        "religions": ["https://data.goldenagents.org/thesaurus/EvangelischLuthers", "https://data.goldenagents.org/thesaurus/Hervormd"],
+        "adamlink": null,
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/OudeKerk",
+        "@type": "Location",
+        "label": "Oude Kerk",
+        "religions": ["https://data.goldenagents.org/thesaurus/Hervormd", "https://data.goldenagents.org/thesaurus/RoomsKatholiek"],
+        "adamlink": "https://adamlink.nl/geo/building/oude-kerk/331",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/Westerkerk",
+        "@type": "Location",
+        "label": "Westerkerk",
+        "religions": ["https://data.goldenagents.org/thesaurus/Hervormd", "https://data.goldenagents.org/thesaurus/WaalsHervormd"],
+        "adamlink": "https://adamlink.nl/geo/building/westerkerk/173",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/Noorderkerk",
+        "@type": "Location",
+        "label": "Noorderkerk",
+        "religions": ["https://data.goldenagents.org/thesaurus/Hervormd"],
+        "adamlink": "https://adamlink.nl/geo/building/noorderkerk/167",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/NieuweKerk",
+        "@type": "Location",
+        "label": "Nieuwe Kerk",
+        "religions": ["https://data.goldenagents.org/thesaurus/Hervormd", "https://data.goldenagents.org/thesaurus/RoomsKatholiek"],
+        "adamlink": "https://adamlink.nl/geo/building/nieuwe-kerk/1222",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/Begijnhofkerk",
+        "@type": "Location",
+        "label": "Begijnhofkerk",
+        "religions": ["https://data.goldenagents.org/thesaurus/EngelsPresbyteriaans"],
+        "adamlink": "https://adamlink.nl/geo/building/engelse-kerk/178",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/Westerkerkhof",
+        "@type": "Location",
+        "label": "Westerkerkhof",
+        "religions": ["https://data.goldenagents.org/thesaurus/Hervormd"],
+        "adamlink": null,
+        "wikidata": "http://www.wikidata.org/entity/Q112811750"
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/Zuiderkerk",
+        "@type": "Location",
+        "label": "Zuiderkerk",
+        "religions": ["https://data.goldenagents.org/thesaurus/Hervormd"],
+        "adamlink": "https://adamlink.nl/geo/building/zuiderkerk/397",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/Noorderkerkhof",
+        "@type": "Location",
+        "label": "Noorderkerkhof",
+        "religions": ["https://data.goldenagents.org/thesaurus/Hervormd"],
+        "adamlink": null,
+        "wikidata": "http://www.wikidata.org/entity/Q112811812"
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/Boompjeskerk",
+        "@type": "Location",
+        "label": "Boompjeskerk",
+        "religions": ["https://data.goldenagents.org/thesaurus/RoomsKatholiek"],
+        "adamlink": "https://adamlink.nl/geo/building/boompjeskerk/672",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/MozesEnAaronkerk",
+        "@type": "Location",
+        "label": "Mozes- en A\u00e4ronkerk",
+        "religions": ["https://data.goldenagents.org/thesaurus/RoomsKatholiek"],
+        "adamlink": "https://adamlink.nl/geo/building/mozes-en-aaronkerk-i/1455",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/Amstelkerk",
+        "@type": "Location",
+        "label": "Amstelkerk",
+        "religions": ["https://data.goldenagents.org/thesaurus/Hervormd"],
+        "adamlink": "https://adamlink.nl/geo/building/amstelkerk/177",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/NieuwezijdsKapel",
+        "@type": "Location",
+        "label": "Nieuwezijds Kapel",
+        "religions": ["https://data.goldenagents.org/thesaurus/Hervormd", "https://data.goldenagents.org/thesaurus/RoomsKatholiek"],
+        "adamlink": "https://adamlink.nl/geo/building/nieuwezijds-kapel/556",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/OudeWaalseKerk",
+        "@type": "Location",
+        "label": "Oude Waalse Kerk",
+        "religions": ["https://data.goldenagents.org/thesaurus/WaalsHervormd"],
+        "adamlink": "https://adamlink.nl/geo/building/walenkerk/327",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/Posthoornkerk",
+        "@type": "Location",
+        "label": "Posthoornkerk",
+        "religions": ["https://data.goldenagents.org/thesaurus/RoomsKatholiek"],
+        "adamlink": "https://adamlink.nl/geo/building/posthoornkerk/181",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/WaalseKerk",
+        "@type": "Location",
+        "label": "Waalse Kerk",
+        "religions": ["https://data.goldenagents.org/thesaurus/WaalsHervormd"],
+        "adamlink": "https://adamlink.nl/geo/building/walenkerk/327",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/OudeLutherseKerk",
+        "@type": "Location",
+        "label": "Oude Lutherse Kerk",
+        "religions": ["https://data.goldenagents.org/thesaurus/EvangelischLuthers"],
+        "adamlink": "https://adamlink.nl/geo/building/oude-lutherse-kerk/1230",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/Oosterkerk",
+        "@type": "Location",
+        "label": "Oosterkerk",
+        "religions": ["https://data.goldenagents.org/thesaurus/Hervormd"],
+        "adamlink": "https://adamlink.nl/geo/building/oosterkerk/400",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/OudezijdsKapel",
+        "@type": "Location",
+        "label": "Oudezijds Kapel",
+        "religions": ["https://data.goldenagents.org/thesaurus/Hervormd", "https://data.goldenagents.org/thesaurus/RoomsKatholiek"],
+        "adamlink": "https://adamlink.nl/geo/building/sint-olofskapel/174",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/DeStar",
+        "@type": "Location",
+        "label": "Kerk De Star",
+        "religions": ["https://data.goldenagents.org/thesaurus/RoomsKatholiek"],
+        "adamlink": "https://adamlink.nl/geo/building/augustinuskerk/653",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/DeLelie",
+        "@type": "Location",
+        "label": "Kerk De Lelie",
+        "religions": ["https://data.goldenagents.org/thesaurus/RoomsKatholiek"],
+        "adamlink": "https://adamlink.nl/geo/building/kerk-de-lelie/1453",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/PortugeesIsraelitischeBegraafplaats",
+        "@type": "Location",
+        "label": "Portugees-Isra\u00eblitische Begraafplaats",
+        "religions": ["https://data.goldenagents.org/thesaurus/PortugeesIsraelitisch"],
+        "adamlink": null,
+        "wikidata": "http://www.wikidata.org/entity/Q831131"
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/Oosterkerk",
+        "@type": "Location",
+        "label": "Oosterkerk",
+        "religions": ["https://data.goldenagents.org/thesaurus/Hervormd"],
+        "adamlink": "https://adamlink.nl/geo/building/oosterkerk/400",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/DeToren",
+        "@type": "Location",
+        "label": "Kerk De Toren",
+        "religions": ["https://data.goldenagents.org/thesaurus/RoomsKatholiek"],
+        "adamlink": "https://adamlink.nl/geo/building/de-toren/1452",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/StadhuisVanHoorn",
+        "@type": "Location",
+        "label": "Kerk Stadhuis van Hoorn",
+        "religions": ["https://data.goldenagents.org/thesaurus/RoomsKatholiek"],
+        "adamlink": "https://adamlink.nl/geo/building/stadhuis-van-hoorn/1450",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/DePool",
+        "@type": "Location",
+        "label": "Kerk De Pool",
+        "religions": ["https://data.goldenagents.org/thesaurus/RoomsKatholiek"],
+        "adamlink": "https://adamlink.nl/geo/building/de-pool/647",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/DeDuif",
+        "@type": "Location",
+        "label": "Kerk De Duif",
+        "religions": ["https://data.goldenagents.org/thesaurus/RoomsKatholiek"],
+        "adamlink": "https://adamlink.nl/geo/building/de-duif/1237",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/HetVrededuifje",
+        "@type": "Location",
+        "label": "Kerk Het Vrededuifje",
+        "religions": ["https://data.goldenagents.org/thesaurus/RoomsKatholiek"],
+        "adamlink": "https://www.adamlink.nl/geo/building/kerk-het-vrededuifje/1454",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/FranseKerk",
+        "@type": "Location",
+        "label": "Franse Kerk",
+        "religions": ["https://data.goldenagents.org/thesaurus/RoomsKatholiek"],
+        "adamlink": "https://adamlink.nl/geo/building/franse-kerk/1436",
+        "wikidata": "http://www.wikidata.org/entity/Q106775647"
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/Eilandskerk",
+        "@type": "Location",
+        "label": "Eilandskerk",
+        "religions": ["https://data.goldenagents.org/thesaurus/Hervormd"],
+        "adamlink": "https://adamlink.nl/geo/building/eilandskerk/638",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/KerkOpDeBrouwersgracht",
+        "@type": "Location",
+        "label": "Kerk Op De Brouwersgracht",
+        "religions": ["https://data.goldenagents.org/thesaurus/RoomsKatholiek", "https://data.goldenagents.org/thesaurus/OudKatholiek"],
+        "adamlink": "https://adamlink.nl/geo/building/kerk-op-de-brouwersgracht/1449",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/KerkOpHetKuiperspad",
+        "@type": "Location",
+        "label": "Kerk Op Het Kuiperspad",
+        "religions": ["https://data.goldenagents.org/thesaurus/RoomsKatholiek"],
+        "adamlink": "https://adamlink.nl/geo/building/willibrordus-buiten-de-veste/643",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/DeKrijtberg",
+        "@type": "Location",
+        "label": "Kerk De Krijtberg",
+        "religions": ["https://data.goldenagents.org/thesaurus/RoomsKatholiek"],
+        "adamlink": "https://adamlink.nl/geo/building/sintfranciscus-xaveriuskerk/120",
+        "wikidata": "http://www.wikidata.org/entity/Q1180056"
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/LamEnToren",
+        "@type": "Location",
+        "label": "Kerk Lam en Toren",
+        "religions": ["https://data.goldenagents.org/thesaurus/Doopsgezind"],
+        "adamlink": "https://adamlink.nl/geo/building/singelkerk/119",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/HetHaantje",
+        "@type": "Location",
+        "label": "Kerk Het Haantje",
+        "religions": ["https://data.goldenagents.org/thesaurus/RoomsKatholiek"],
+        "adamlink": "https://adamlink.nl/geo/building/museum-ons-lieve-heer-op-solder/116",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/PortugeesIsraelitischeSynagoge",
+        "@type": "Location",
+        "label": "Portugees-Isra\u00eblitische Synagoge",
+        "religions": ["https://data.goldenagents.org/thesaurus/PortugeesIsraelitisch"],
+        "adamlink": "https://adamlink.nl/geo/building/portugeesisraelitische-synagoge/1239",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/NieuweWaalseKerk",
+        "@type": "Location",
+        "label": "Nieuwe Waalse Kerk",
+        "religions": ["https://data.goldenagents.org/thesaurus/WaalsHervormd"],
+        "adamlink": "https://adamlink.nl/geo/building/nieuwe-waalse-kerk/1456",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/Begijnhofkapel",
+        "@type": "Location",
+        "label": "Begijnhofkapel",
+        "religions": ["https://data.goldenagents.org/thesaurus/RoomsKatholiek"],
+        "adamlink": "https://adamlink.nl/geo/building/begijnhofkapel/1448",
+        "wikidata": "http://www.wikidata.org/entity/Q2740663"
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/HersteldLutherseKerk",
+        "@type": "Location",
+        "label": "Hersteld Lutherse Kerk",
+        "religions": ["https://data.goldenagents.org/thesaurus/HersteldEvangelischLuthers"],
+        "adamlink": "https://adamlink.nl/geo/building/compagnietheater/1439",
+        "wikidata": "http://www.wikidata.org/entity/Q1844809"
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/DePapegaai",
+        "@type": "Location",
+        "label": "Kerk De Papegaai",
+        "religions": ["https://data.goldenagents.org/thesaurus/RoomsKatholiek"],
+        "adamlink": "https://adamlink.nl/geo/building/de-papegaai/1437",
+        "wikidata": "http://www.wikidata.org/entity/Q2102894"
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/DeZaaijer",
+        "@type": "Location",
+        "label": "Kerk De Zaaijer",
+        "religions": ["https://data.goldenagents.org/thesaurus/RoomsKatholiek"],
+        "adamlink": "https://adamlink.nl/geo/building/ignatius/641",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/KerkInTMaagdenhuis",
+        "@type": "Location",
+        "label": "Kerk in 't Maagdenhuis",
+        "religions": ["https://data.goldenagents.org/thesaurus/RoomsKatholiek"],
+        "adamlink": "https://adamlink.nl/geo/building/kerk-in-het-maagdenhuis/1447",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/SintNicolaaskerkI",
+        "@type": "Location",
+        "label": "Sint Nicolaaskerk",
+        "religions": ["https://data.goldenagents.org/thesaurus/RoomsKatholiek"],
+        "adamlink": "https://adamlink.nl/geo/building/sint-nicolaaskerk-i/1434",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/SintNicolaaskerkII",
+        "@type": "Location",
+        "label": "Sint Nicolaaskerk",
+        "religions": ["https://data.goldenagents.org/thesaurus/RoomsKatholiek", "https://data.goldenagents.org/thesaurus/OudKatholiek"],
+        "adamlink": "https://adamlink.nl/geo/building/sint-nicolaaskerk-ii/1435",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/KerkInDeVinkenstraat",
+        "@type": "Location",
+        "label": "Kerk In De Vinkenstraat",
+        "religions": ["https://data.goldenagents.org/thesaurus/RoomsKatholiek", "https://data.goldenagents.org/thesaurus/OudKatholiek"],
+        "adamlink": "https://adamlink.nl/geo/building/vinkenstraat-160162/824",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/KerkOpDeRaamgracht",
+        "@type": "Location",
+        "label": "Kerk Op De Raamgracht",
+        "religions": ["https://data.goldenagents.org/thesaurus/RoomsKatholiek"],
+        "adamlink": "https://adamlink.nl/geo/building/kerk-op-de-raamgracht/1445",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/DeLiefde",
+        "@type": "Location",
+        "label": "Kerk De Liefde",
+        "religions": ["https://data.goldenagents.org/thesaurus/RoomsKatholiek"],
+        "adamlink": "https://adamlink.nl/geo/building/de-liefde-i/1446",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/DeDrieBonteKraaien",
+        "@type": "Location",
+        "label": "Kerk De Drie Bonte Kraaien",
+        "religions": ["https://data.goldenagents.org/thesaurus/RoomsKatholiek", "https://data.goldenagents.org/thesaurus/OudKatholiek"],
+        "adamlink": "https://adamlink.nl/geo/building/huis-aan-de-bonte-kraaiengang/812",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/KerkInHetJongenshuis",
+        "@type": "Location",
+        "label": "Kerk in het Jongensweeshuis",
+        "religions": ["https://data.goldenagents.org/thesaurus/RoomsKatholiek", "https://data.goldenagents.org/thesaurus/OudKatholiek"],
+        "adamlink": "https://adamlink.nl/geo/building/amstelstad/335",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/DeZon",
+        "@type": "Location",
+        "label": "Kerk De Zon",
+        "religions": ["https://data.goldenagents.org/thesaurus/Doopsgezind"],
+        "adamlink": "https://adamlink.nl/geo/building/kerk-de-zon/1440",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/DeOoijevaar",
+        "@type": "Location",
+        "label": "Kerk De Ooijevaar",
+        "religions": ["https://data.goldenagents.org/thesaurus/RoomsKatholiek", "https://data.goldenagents.org/thesaurus/OudKatholiek"],
+        "adamlink": "https://adamlink.nl/geo/building/kerk-de-ooijevaar/1444",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/DePauw",
+        "@type": "Location",
+        "label": "Kerk De Pauw",
+        "religions": ["https://data.goldenagents.org/thesaurus/RoomsKatholiek", "https://data.goldenagents.org/thesaurus/OudKatholiek"],
+        "adamlink": "https://adamlink.nl/geo/building/kerk-de-pauw/1443",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/Gasthuiskerk",
+        "@type": "Location",
+        "label": "Gasthuiskerk",
+        "religions": ["https://data.goldenagents.org/thesaurus/HersteldEvangelischLuthers"],
+        "adamlink": "https://adamlink.nl/geo/building/gasthuiskerk/857",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/RemonstrantseKerk",
+        "@type": "Location",
+        "label": "Remonstrantse Kerk",
+        "religions": ["https://data.goldenagents.org/thesaurus/Remonstrants"],
+        "adamlink": "https://adamlink.nl/geo/building/de-rode-hoed/12",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/EngelsEpiscopaalseKerk",
+        "@type": "Location",
+        "label": "Engels Episcopaalse Kerk",
+        "religions": ["https://data.goldenagents.org/thesaurus/EngelsEpiscopaals"],
+        "adamlink": "https://adamlink.nl/geo/building/christ-church/1438",
+        "wikidata": "http://www.wikidata.org/entity/Q11721714"
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/DeArkeNoachs",
+        "@type": "Location",
+        "label": "Kerk De Arke Noachs",
+        "religions": ["https://data.goldenagents.org/thesaurus/Doopsgezind"],
+        "adamlink": "https://adamlink.nl/geo/building/de-arke-noach/1442",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/DeKruikjes",
+        "@type": "Location",
+        "label": "Kerk De Kruikjes",
+        "religions": ["https://data.goldenagents.org/thesaurus/Doopsgezind"],
+        "adamlink": "https://adamlink.nl/geo/building/de-drie-kruikjes/1441",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/Paleiskapel",
+        "@type": "Location",
+        "label": "Paleiskapel",
+        "religions": ["https://data.goldenagents.org/thesaurus/RoomsKatholiek"],
+        "adamlink": "https://adamlink.nl/geo/building/paleis-op-de-dam/1221",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/DeDrieValken",
+        "@type": "Location",
+        "label": "Kerk De Drie Valken",
+        "religions": ["https://data.goldenagents.org/thesaurus/GrieksKatholiek"],
+        "adamlink": "https://adamlink.nl/geo/building/de-drie-valken/1451",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/NieuweLutherseKerk",
+        "@type": "Location",
+        "label": "Nieuwe Lutherse Kerk",
+        "religions": ["https://data.goldenagents.org/thesaurus/EvangelischLuthers"],
+        "adamlink": "https://adamlink.nl/geo/building/koepelkerk/1",
+        "wikidata": null
+    }, {
+        "@id": "https://data.goldenagents.org/thesaurus/KerkAanHuis",
+        "@type": "Location",
+        "label": "Kerk aan huis",
+        "religions": ["https://data.goldenagents.org/thesaurus/EvangelischLuthers", "https://data.goldenagents.org/thesaurus/HersteldEvangelischLuthers", "https://data.goldenagents.org/thesaurus/Remonstrants"],
+        "adamlink": null,
+        "wikidata": null
+    }]
+}
