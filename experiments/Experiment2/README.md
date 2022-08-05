@@ -29,6 +29,124 @@ All datasets:
   * 10k+ linkset from previous experiment
   [`ggd_clusters_t0.70_k10_validation.trig`](https://github.com/knaw-huc/golden-agents-occasional-poetry/blob/main/experiments/Semantics2022/results/ggd_clusters_t0.70_k10_validation.trig)
 
+#### Query and data (ttl):
+* TBD
+
+```sparql
+PREFIX schema: <http://schema.org/>
+PREFIX roar: <https://data.goldenagents.org/ontology/roar/>
+PREFIX pnv: <https://w3id.org/pnv#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sem: <http://semanticweb.cs.vu.nl/2009/11/sem/>
+PREFIX thes: <https://data.goldenagents.org/thesaurus/>
+
+CONSTRUCT {
+    
+    ?person a roar:Person ;
+            rdfs:label ?literalName ;
+            pnv:hasName ?personName ;
+            roar:participatesIn ?event .
+    
+    ?personName a pnv:PersonName ;
+                pnv:givenName ?givenName ;
+                pnv:surnamePrefix ?surnamePrefix ;
+                pnv:baseSurname ?baseSurname ;
+                pnv:literalName ?literalName .
+    
+    ?personRole a ?personRoleType ;
+                roar:carriedIn ?event ;
+                roar:carriedBy ?person .
+    
+    ?otherPerson a roar:Person ;
+                 rdfs:label ?otherPersonLiteralName  ;
+                 pnv:hasName ?otherPersonName ; 
+                 roar:participatesIn ?event .    
+    
+    ?otherPersonName a pnv:PersonName ;
+                     pnv:givenName ?otherPersonGivenName ;
+                     pnv:surnamePrefix ?otherPersonSurnamePrefix ;
+                     pnv:baseSurname ?otherPersonBaseSurname ;
+                     pnv:literalName ?otherPersonLiteralName .
+    
+    ?otherPersonRole a ?otherPersonRoleType ;
+                roar:carriedIn ?event ;
+                roar:carriedBy ?otherPerson .
+    
+    ?event a ?eventType ;
+           sem:hasTimeStamp ?date ;
+           roar:hasPlace ?eventLocation ;
+           roar:hasReligion ?eventReligion .
+    
+    ?eventLocation a roar:Location ;
+                   roar:hasReligion ?eventLocationReligion .    
+}
+
+WHERE {
+    
+    # A person takes part in an event
+    ?person a schema:Person ; # only in GGD
+            pnv:hasName ?personName ;
+            roar:participatesIn ?event .
+    
+    # Has name information
+    ?personName a pnv:PersonName ;
+                pnv:literalName ?literalName .
+    
+    OPTIONAL { ?personName pnv:givenName ?givenName . }
+    OPTIONAL { ?personName pnv:surnamePrefix ?surnamePrefix . }
+    OPTIONAL { ?personName pnv:baseSurname ?baseSurname . }
+    
+    # That person has a particular role in that event
+    ?personRole a ?personRoleType ;
+       roar:carriedBy ?person ;
+       roar:carriedIn ?event .
+    
+    # That event has a date and is of a particular type
+    ?event a ?eventType ;
+           sem:hasTimeStamp ?date .
+ 
+    # There is an optional event location
+    OPTIONAL {
+        ?event roar:hasPlace ?eventLocation .
+        
+        # And optionally, this eventLocation has religions attached
+        OPTIONAL {
+            ?eventLocation roar:hasReligion ?locationReligion .
+        }
+        
+        # And optionally, this event has a religion (from source)
+        OPTIONAL {
+            ?event roar:hasReligion ?eventReligion .
+        }
+        
+    }
+    
+    # There is an optional other person in a particular role in that event
+    OPTIONAL {
+        ?otherPersonRole a ?otherPersonRoleType ;
+           roar:carriedBy ?otherPerson ;
+           roar:carriedIn ?event .
+
+        # And its not the person itself
+        FILTER(?otherPerson != ?person)
+
+        # This person also has a name
+        ?otherPerson pnv:hasName ?otherPersonName .
+
+        # Has name information
+        ?otherPersonName a pnv:PersonName ;
+                         pnv:literalName ?otherPersonLiteralName .
+
+        OPTIONAL { ?otherPersonName pnv:givenName ?otherPersonGivenName . }
+        OPTIONAL { ?otherPersonName pnv:surnamePrefix ?otherPersonSurnamePrefix . }
+        OPTIONAL { ?otherPersonName pnv:baseSurname ?otherPersonBaseSurname . }
+    }
+    
+}
+```
+
 ### Baptism registers (Doop)
 
-Query (TBD)
+#### Query and data (ttl):
+* TBD
