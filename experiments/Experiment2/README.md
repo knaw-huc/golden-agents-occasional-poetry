@@ -108,7 +108,9 @@ WHERE {
  
     # There is an optional event location
     OPTIONAL {
-        ?event roar:hasPlace ?eventLocation .
+        ?event roar:registers ?registeredEvent .
+        
+        ?registeredEvent roar:hasPlace ?eventLocation .
         
         # And optionally, this eventLocation has religions attached
         OPTIONAL {
@@ -117,7 +119,7 @@ WHERE {
         
         # And optionally, this event has a religion (from source)
         OPTIONAL {
-            ?event roar:hasReligion ?eventReligion .
+            ?registeredEvent roar:hasReligion ?eventReligion .
         }
         
     }
@@ -230,7 +232,9 @@ WHERE {
  
     # There is an optional event location
     OPTIONAL {
-        ?event roar:hasPlace ?eventLocation .
+        ?event roar:registers ?registeredEvent .
+        
+        ?registeredEvent roar:hasPlace ?eventLocation .
         
         # And optionally, this eventLocation has religions attached
         OPTIONAL {
@@ -239,7 +243,7 @@ WHERE {
         
         # And optionally, this event has a religion (from source)
         OPTIONAL {
-            ?event roar:hasReligion ?eventReligion .
+            ?registeredEvent roar:hasReligion ?eventReligion .
         }
         
     }
