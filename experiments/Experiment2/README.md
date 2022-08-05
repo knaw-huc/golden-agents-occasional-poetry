@@ -25,7 +25,9 @@ All datasets:
 * Linksets:
   * Links included in Gelegenheidsgedichten
   * Ja, ik wil! to SAA Ondertrouwregisters
+  [`linkset_jiw_otr_20211005.trig.gz`](https://github.com/knaw-huc/golden-agents-processes-of-creativity/blob/main/linksets/linkset_jiw_otr_20211005.trig.gz)
   * 10k+ linkset from previous experiment
+  [`ggd_clusters_t0.70_k10_validation.trig`](https://github.com/knaw-huc/golden-agents-occasional-poetry/blob/main/experiments/Semantics2022/results/ggd_clusters_t0.70_k10_validation.trig)
 
 ### Baptism registers (Doop)
 
