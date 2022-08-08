@@ -30,7 +30,7 @@ All datasets:
   [`ggd_clusters_t0.70_k10_validation.trig`](https://github.com/knaw-huc/golden-agents-occasional-poetry/blob/main/experiments/Semantics2022/results/ggd_clusters_t0.70_k10_validation.trig)
 
 #### Query and data (ttl):
-* TBD
+* [`ggd_people_events_roles_locations.ttl`](./ggd_people_events_roles_locations.ttl)
 
 ```sparql
 PREFIX schema: <http://schema.org/>
@@ -151,7 +151,7 @@ WHERE {
 ### Baptism registers (Doop)
 
 #### Query and data (ttl):
-* TBD
+* `ga_doop_locations.ttl.gz`
 
 ```sparql
 PREFIX schema: <http://schema.org/>
