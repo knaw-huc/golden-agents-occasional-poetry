@@ -35,3 +35,24 @@ Please notify the following issues:
 - Although religion and church coincide most of the time (in a Walloon or a Lutheran church one might expect only Walloon and Lutheran Baptisms for instance) this is not always the case. It is likely to also find Roman Catholic burials in the Dutch Reformed churches such as the Nieuwe Kerk and the Oude Kerk also after the 'Alteratie' of 1578. The same applies for Lutherans and Walloons, who also might be found in the indexes of the large Dutch Reformed churches.
 - For now, time isn't included in the matching between churches and religion. This might be a future idea when we want to distinct the transfer of a certain religion in a single church(building). For example the shift from Roman Catholic towards Dutch Reformed in 1578 or the shift from Roman Catholic towards Old Catholic in the early 1700s. In the case of the administration of the 'Lutherse Kerk' not a single Lutheran church was linked since the periode coincided with 4 (!) Lutheran churches that were present in Amsterdam during the time the administration was kept. Untill the erection of the Nieuwe Lutherse Kerk it is however quite clear in what buildings the Lutherans went to church. When we work with time as a label it might be possible adding these nuances.
 - It has turned out that in the case of the Walloons that where administred at the Westerkerk all these records were matched correctly. This variation in administration seems to be quite unique.
+
+## Ja, ik wil!
+
+```sparql
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX roar: <https://data.goldenagents.org/ontology/roar/>
+
+SELECT (COUNT(?role) AS ?n) ?religionLabel WHERE { 
+    ?role a roar:Role ;
+          roar:hasReligion ?religionRole .
+    
+    ?religionRole roar:carriedBy ?religion .
+    
+    ?religion rdfs:label ?religionLabel .    
+    
+} GROUP BY ?religionLabel ORDER BY DESC(?n)
+
+```
+
+Results: [`jiw_religions.csv`](./jiw_religions.csv)
