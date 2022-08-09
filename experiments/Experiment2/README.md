@@ -8,18 +8,18 @@ We use the same query to generate a new abstraction from the GA SAA data, this t
 
 All datasets:
 * SAA Indices
-  * Notariële Archieven 1578-1915
-  * Doopregisters voor 1811
-  * Ondertrouwregisters 1565-1811
-  * Kwijtscheldingen voor 1811
-  * Poorters 1531-1652
-  * Confessieboeken 1535-1732
-  * Boetes op begraven
-  * Begraafregisters voor 1811
-  * Overledenen Gast-, Pest-, Werk- en Spinhuis 1739-1812
-  * Averijgrossen 1700-1810
-  * Boedelpapieren 1634-1938
-  * Lidmatenregister Doopsgezinde Gemeente
+  * Notariële Archieven 1578-1915 (3.102.264 persons)
+  * Doopregisters voor 1811 (4.880.206 persons)
+  * Ondertrouwregisters 1565-1811 (906.695 persons)
+  * Kwijtscheldingen voor 1811 (358.689 persons)
+  * Poorters 1531-1652 (21.441 persons)
+  * Confessieboeken 1535-1732 (113.313 persons)
+  * Boetes op begraven (4.596 persons)
+  * Begraafregisters voor 1811 (1.509.132 persons)
+  * Overledenen Gast-, Pest-, Werk- en Spinhuis 1739-1812 (40.109 persons)
+  * Averijgrossen 1700-1810 (10.986 persons)
+  * Boedelpapieren 1634-1938 (20.572 persons)
+  * Lidmatenregister Doopsgezinde Gemeente (29.665 persons)
 * Ja, ik wil!
 * Gelegenheidsgedichten
 * Linksets:
