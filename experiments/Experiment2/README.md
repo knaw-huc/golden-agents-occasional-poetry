@@ -79,7 +79,7 @@ CONSTRUCT {
            roar:hasReligion ?eventReligion .
     
     ?eventLocation a roar:Location ;
-                   roar:hasReligion ?eventLocationReligion .    
+                   roar:hasReligion ?locationReligion .    
 }
 
 WHERE {
@@ -200,7 +200,7 @@ CONSTRUCT {
            roar:hasReligion ?eventReligion .
     
     ?eventLocation a roar:Location ;
-                   roar:hasReligion ?eventLocationReligion .    
+                   roar:hasReligion ?locationReligion .    
    
 }
 
