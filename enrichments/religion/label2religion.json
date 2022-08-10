@@ -10,5 +10,20 @@
     "Portugees-Israëlitisch": "https://data.goldenagents.org/thesaurus/PortugeesIsraelitisch",
     "Remonstrant": "https://data.goldenagents.org/thesaurus/Remonstrants",
     "Rooms-Katholiek": "https://data.goldenagents.org/thesaurus/RoomsKatholiek",
-    "Waals-Hervormd": "https://data.goldenagents.org/thesaurus/WaalsHervormd"
+    "Waals-Hervormd": "https://data.goldenagents.org/thesaurus/WaalsHervormd",
+    "Gereformeerd": "https://data.goldenagents.org/thesaurus/Hervormd",
+    "Rooms": "https://data.goldenagents.org/thesaurus/RoomsKatholiek",
+    "Luthers": "https://data.goldenagents.org/thesaurus/EvangelischLuthers",
+    "Joods / Israëlitisch": "https://data.goldenagents.org/thesaurus/Joods",
+    "Mennoniet": "https://data.goldenagents.org/thesaurus/Mennoniet",
+    "Waals": "https://data.goldenagents.org/thesaurus/WaalsHervormd",
+    "Episcopaal": "https://data.goldenagents.org/thesaurus/EngelsEpiscopaals",
+    "Augsburgse confessie": "https://data.goldenagents.org/thesaurus/EvangelischLuthers",
+    "Grieks-katholiek": "https://data.goldenagents.org/thesaurus/GrieksKatholiek",
+    "Jansenist": "https://data.goldenagents.org/thesaurus/OudKatholiek",
+    "Broedergemeente": "https://data.goldenagents.org/thesaurus/Broedergemeente",
+    "Anabaptist / Wederdoper": "https://data.goldenagents.org/thesaurus/Anabaptist",
+    "Augsburgse Confessie": "https://data.goldenagents.org/thesaurus/EvangelischLuthers",
+    "Quaker": "https://data.goldenagents.org/thesaurus/Quackers",
+    "Quakers": "https://data.goldenagents.org/thesaurus/Quackers"
 }
